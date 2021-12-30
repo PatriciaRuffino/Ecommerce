@@ -18,7 +18,7 @@ export default function ProductScreen(props) {
     useEffect(() => {
         dispatch(detailsProduct(productId));
     }, [dispatch, productId])
-    const addToCartHandle = () =>{
+    const addToCartHandle = () => {
         props.history.push(`/cart/${productId}?qty=${qty}`);
     }
 
@@ -87,7 +87,7 @@ export default function ProductScreen(props) {
                                                                 {
                                                                     [...Array(product.countInStock).keys()].map(
                                                                         (x) => (
-                                                                            <option key={x+1} value={x + 1}>{x + 1}</option>
+                                                                            <option key={x + 1} value={x + 1}>{x + 1}</option>
                                                                         )
                                                                     )}
                                                             </select>
